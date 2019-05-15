@@ -51,7 +51,7 @@ if ($var5 == $var6 ) {
 if ($var5 === $var6 ) {
     echo "They are identical";
 }
-
+// Date
 date_default_timezone_set('America/Montreal'); 
 $v_date = date('l jS \of F Y H:i:s A');
 echo "Current Date and Time is : $v_date <br/>";  
@@ -62,3 +62,4 @@ if ($time < "20") {
 
 ?>
 </body>
+
