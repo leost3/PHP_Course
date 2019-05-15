@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<?php 
+// Concatanation
+    /*
+    $hour = "12";
+    $hour .= $hour;
+    echo"{$hour}AM</br>";
+    echo $hour."AM</br>";
+    echo $hourAM;
+    */
+//  ----------------------------------------
+
+// 
+    // $message = " hellow World</br> ";
+    // echo "Normal:   ".$message;
+    // echo strtolower("lowercase:   ".$message);
+    // echo strtoupper("uppercase:   ".$message);
+    // echo ucfirst("First letter uppercase:   ".$message);
+    // echo ucwords("All initials uppercase:   ".$message);
+    // echo strlen("String length:   ".$message." </br>");
+    // echo strlen(trim("Remove spaces:   ".$message." </br>"));
+    // echo strstr($message, "World");
+    // echo str_replace("World","student",$message);
+    // echo substr($message, 8, 5);
+
+// --------------------
+// $nbr = 3.14;
+// echo floor($nbr)."</br>";
+// $booll = false;
+// echo $booll."</br>";
+// // ---------------------
+// $max = 100;
+// echo ++$max."</br>";
+// define("MAX_VALUE", 100);
+// ECHO MAX_VALUE;
+// --------------
 $empName = "Stewart Laura";
 $annualSallary = 45000;
 $fedTax = 18.37;
