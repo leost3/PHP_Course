@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php 
-$student_FirstName = 'Salima';
-$student_LastName = 'Hassaine';
-$chapter = 2;
+$student_FirstName = 'Leonardo';
+$student_LastName = 'Studart';
+$chapter = 3;
 $lab = 1;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,6 +11,7 @@ $lab = 1;
 	<title>PHP Demo</title>
 </head>
 <body>
+	
 	<div id="page" align="center">
 		<div id="content" style="width:800px">
 			<div id="logo">
@@ -35,7 +36,15 @@ $lab = 1;
 					<span class="titletext"><?php echo "Chapter ".$chapter." - Lab practice ".$lab; ?></span>
 				</div>
 					<div class="bodytext" style="padding:12px;" align="justify">
-					<strong>You have to use this template to practice PHP . Enjoy!</strong><br />
+					<?php
+					if (isset($_POST["submit"])) {
+						echo "--------After processing--------</br>";
+						echo "Employee Id ".$_POST["id"]."</br>";
+						echo "Employee First Name ".$_POST["firstName"]."</br>";
+						echo "Employee Last Name ".$_POST["lastName"]."</br>";
+						echo "Employee Gross Salary ".$_POST["grossSalary"]."</br>";
+					}
+					?>
 				</div>
 			</div>
 			
