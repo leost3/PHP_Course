@@ -98,6 +98,27 @@
     }
 
     Display3($carsIndexedAss);
+
+
+    echo " ------------------------- sdsdsdsdsd---------------------------------<br />";
+
+    $carsIndexedAss = array(
+        "America" => array("Jeep" => 2006,"BMW" => 2006,"Mazda" => 2006),
+        "Japan" => array("Audi" => 2006,"Mercedes" => 2006,"Ford" => 2006),
+        "Europe" => array("Hiunday" => 2006,"Kia" => 2006,"Toyota" => 2006),
+    );
+
+
+    function Display4($array) {
+        foreach($array as $key1 => $row ) {
+            echo "$key1";
+            foreach($row as $key => $value) {
+                echo "[$key : $value]";
+            }
+        }
+    }
+
+    Display4($carsAssIndexed);
 ?>
 </body>
 </html>
