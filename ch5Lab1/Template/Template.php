@@ -21,7 +21,9 @@
 					<option value="Year: Old to New"></option>
 				</input>
 			</form> -->
-
+		<div>
+			<h1><?php sortByModel($cars)?></h1>
+		</div>
 
 
 			// Not sorted
@@ -32,7 +34,6 @@
 			// Km: Low to High
 			// Year: new to Old
 			// Year: Old to New
-
 				<table border="0">
 						<div class="bodytext" style="padding:12px;" align="justify">
 						<?php

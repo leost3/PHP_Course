@@ -10,8 +10,21 @@ $cars = array
               "Honda" => array("Year" => 2016, "Make" =>"Honda","Model" =>"Pilot","Old_Price" =>46320, "Price"=>44999,"KM"=> "60","Color" =>"Silver", "Image" =>"Honda.jpg"),
 
               "Audi" => array("Year" => 2015, "Make" =>"Audi","Model" =>"Q3","Old_Price" => 0, "Price"=>30988,"KM"=> "40000","Color" =>"Black", "Image" =>"Audi.jpg")
-
     );
+    // sort
+    // rsort
+    // krsort
+    // asort
+    // arsort
+    // that sorts the cars by Increasing order of Model.
+    function sortByModel($asArray){
+          
+        foreach($asArray as $key => $row) {
+            echo "$key";
+            ksort($row);
+        }
+        // echo $asArray;    
+    } 
 
 
     function Display($array) {
@@ -40,6 +53,30 @@ $cars = array
         echo "</table>";
     }
 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function sortByPriceInc(&$asArray){..} that sorts the cars by Increasing order of Price.
+    function sortByPriceDec(&$asArray){..} that sorts the cars by Decreasing order of Price.
+    function sortByYearInc(&$asArray){..} that sorts the cars by Increasing order of Year.
+    function sortByYearDec(&$asArray){..} that sorts the cars by Decreasing order of Year.
+    function sortByKMInc(&$asArray){..} that sorts the cars by Increasing order of KM.
+    function sortByKMDec(&$asArray){..} that sorts the cars by Decreasing order of KM. 
+
+
+
+
 // Not sorted
 // MOdel
 // PRice: Low to High
@@ -48,7 +85,5 @@ $cars = array
 // Km: Low to High
 // Year: new to Old
 // Year: Old to New
-
-
 
 ?>
