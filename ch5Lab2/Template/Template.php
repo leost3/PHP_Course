@@ -1,6 +1,7 @@
 <?php include "includes/header.php"?>
 <?php include "includes/arrayFunctions.php"?>
 <?php include "includes/sortFunctions.php"?>
+<?php include "classes/Car.php"?>
 
 <body>
 	<div id="page" align="center">
@@ -20,21 +21,30 @@
 					<option value="2" <?php if($selected == 1) echo 'selected' ?> >Price: High to Low</option>
 					<option value="3" <?php if($selected == 1) echo 'selected' ?> >Price: Low to High</option>
 					<option value="4">Km: High to Low</option> 
-					<!-- <option value="Year: new to Old">Year: new to Old</option>
-					<option value="Year: Old to New">Year: Old to New</option> -->
+					<option value="5">Km: Low to High</option> 
+					<option value="6">Year: new to Old</option>
+					<option value="7">Year: Old to New</option>
 				</select>
 				<!-- <button type="submit" name="submit">submit</button> -->
 			</form>
 			<?php 
 				if (isset($_POST["sort"])) {
 					switch($_POST["sort"]) {
+						case 0: $cars;
+								break;
 						case 1: ksort($cars);
 								break;
 						case 2: sortByPrice_High_Low($cars);
 								break;
 						case 3: sortByPrice_Low_High($cars);
 								break;
-						case 4: sortByKm($cars);
+						case 4: sortByKmHL($cars);
+								break;
+						case 5: sortByKmLH($cars);
+								break;
+						case 6: sortYearHighLow($cars);
+								break;
+						case 7: sortYearLowHigh($cars);
 								break;
 					}
 			} 
@@ -43,13 +53,10 @@
 				<table border="0">
 						<div class="bodytext" style="padding:12px;" align="justify">
 						<?php
-						if (isset($_POST["sort"])) {
-							$selected = $_POST["sort"];	
-						} 
-
-
-						Display($cars);
-						
+							if (isset($_POST["sort"])) {
+								$selected = $_POST["sort"];	
+							} 
+							Car::Display($cars);
 						?>
 					</div>
 				</table>

@@ -11,48 +11,46 @@
 			<div id="contenttext">
 				<?php include "includes/title.php"?>
 				<div class="bodytext" style="padding:12px;" align="justify">
-				
-				<div class="bodytext" style="padding:12px;" align="justify">
-					<?php
-						$carCarousel = array("car1.jpg", "car2.jpg", "car3.jpg","car4.jpg","car5.jpg","car6.jpg")
+					<?php 
+						$cars_carousel = array("car1.jpg","car2.jpg","car3.jpg","car4.jpg","car5.jpg","car6.jpg");
 					?>
-					<div id="myCarousel" class ="carousel slide" data-ride = "carousel">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- indicators -->
-
 						<?php 
-							echo '<ul class = "carousel-indicators">';
-							$count = count($carCarousel);
-							for ($i=0; $i <$count ; $i++) { 
-								if ($i == 0) 
-									echo '<li data-target = "#myCarousel" data-slide-to = "0" class = "active"> </li>';
-								else
-									echo '<li data-target = "#myCarousel" data-slide-to = "'.$i.'" class = "active"> </li>';	
-								
+							echo "<ul class='carousel-indicator'>";
+							$count = count($cars_carousel);
+							for ($x=0; $x < $count; $x++) {
+								if ($x == 0) {
+									echo "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>";
+									
+								}else {
+									echo "<li data-target='#myCarousel' data-slide-to='$x' class='active'></li>";
+									
+								}
 							}
-							echo '</ul>';
+							echo"</ul>";
 						?>
-
+						<!-- The Slideshow -->
 						<?php 
-							echo '<div clas= "carousel-inner">';
-							for ($i=0; $i <$count ; $i++) { 
-								if ($i == 0)
-									echo '<div class= "carousel-item active">';
-								else
-									echo '<div class= "carousel-item">';
-								echo '<img src = "images/'.$carCarousel[$i].'"	height="400 width="600"	/>';
-								echo '</div>';
+							echo "<ul class='carousel-inner'>";
+							for ($x=0; $x < $count; $x++) {
+								if ($x == 0) {
+									echo "<div class='carousel-item active'";
+									
+									
+								}else {
+									echo "<div class='carousel-item'>";
+									
+								}
+								echo '<img src="./images/cars/'.$cars_carousel[$x].'" class=""alt=>';
+								echo "</div>";
 							}
-							echo '</div>';
 						?>
-						<!-- Left and right controls -->
-						<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-							<span class="carousel-control-prev-icon"></span>
-						</a>
-						<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+						<!-- T -->
+						<a class="carousel-control-prev" href="#myCarousel" data-slide="next">
 							<span class="carousel-control-next-icon"></span>
 						</a>
 					</div>
-				</div>
 				</div>
 			</div>
 			<?php include "includes/footer.php"?>
