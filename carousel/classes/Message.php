@@ -5,7 +5,7 @@ class Message {
     public static $Warning  = 2;
     public static $Info     = 3;
 
-    public static function Show($message, $type) {
+    public static function Show($message, $type = 3) {
         if (!empty($message)) {
             switch($type) {
                 case 0: echo
@@ -15,8 +15,9 @@ class Message {
                 break;
                 case 1: echo
                 '<div class="alert alert-success alert-dismissible fade show">
-                    <strong>Success! </strong><br>
+                    <strong>Success!</strong><br>
                 ';
+                break;
                 case 2: echo
                 '<div class="alert alert-warning alert-dismissible fade show">
                     <strong>Warning! </strong><br>
@@ -24,7 +25,7 @@ class Message {
                 break;
                 default: echo
                 '<div class="alert alert-info alert-dismissible fade show">
-                    <strong>Warning! </strong><br>
+                    <strong>Information! </strong><br>
                 ';
                 break;
             }

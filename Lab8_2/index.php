@@ -1,8 +1,5 @@
 <?php include "includes/header.php"?>
-<?php include "includes/array_functions.php"?>
-<?php include "includes/sorting_functions.php"?>
 <?php include "classes/Message.php"?>
-<?php include "classes/Caroussel.php"?>
 <body>
 	<div id="page" align="center">
 		<div id="content" style="width:800px">
@@ -14,31 +11,16 @@
 			<div class="bodytext" style="padding:12px;" align="justify">
 				
 				<?php
-					Message::Show("Welcome!");
-					Message::Show("Welcome!",Message::$Success);
-					Message::Show("Wrong Page!",Message::$Error);
-					Message::Show("Carefoul!",Message::$Warning);
-					// Message::Show("hum...",Message::$Success);
+				    Message::Show("Welcome!");
+					Message::Show("Wrong Page", Message::$Medium_Size, Message::$Error);
+					Message::Show("There was a problem with your network", Message::$Big_Size, Message::$Warning);
+					Message::Show("The problem is solved", Message::$Small_Size, Message::$Success);
+					
 					$cars_carousel = array("car1.jpg", "car2.jpg", "car3.jpg", "car4.jpg", "car5.jpg", "car6.jpg");
 				?>
 				<div id="myCarousel" class="carousel slide" data-ride= "carousel" >
 				<!-- indicators -->
-				<!-- PASTE CAROUSEL HERE -->
 				<?php
-					Carousel::DisplayCarousel($cars_carousel);
-				?>
-			</div>
-		</div>
-			<?php include "includes/footer.php"?>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
-
-<!-- < ?php
 					echo '<ul class="carousel-indicators">';
 					$count = count($cars_carousel);
 					for($x=0; $x<$count; $x++ ){
@@ -49,8 +31,9 @@
 						}
 					}
 					echo '</ul>';
-				? >
-				< ?php
+				?>
+				<!-- The slideshow -->
+				<?php
 					echo '<div class="carousel-inner" role="listbox">';
 					
 					for($x = 0; $x < $count; $x++ ){
@@ -64,10 +47,17 @@
 					}
 					echo '</div>';
 				?>
+				<!-- Left and right controls -->
 				<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
 				</a>
 				<a class="carousel-control-next" href="#myCarousel" data-slide="next">
 					<span class="carousel-control-next-icon"></span>
 				</a>
-				</div> -->
+				</div>
+			</div>
+		</div>
+			<?php include "includes/footer_menu.php"?>
+		</div>
+	</div>
+	<?php include "includes/footer_links.php"?>

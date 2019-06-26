@@ -13,24 +13,25 @@
 				<?php
 					$selected = 0;
 					if(isset($_POST["sorting"])){
-						$selected = $_POST["sorting"];
+						$selected = $_POST["sorting"]; // 1
+						
 					}
 				?>
 					<form action ="#" method="POST">
 						<b>Sort by:</b> 
 						<select name="sorting" onchange="this.form.submit();">
-						<option value="0" <?php if($selected ==0) echo "selected"?>>Not sorted</option>
-						<option value="1" <?php if($selected ==1) echo "selected"?>>By Make</option>
-						<option value="2" <?php if($selected ==2) echo "selected"?>>By Price (High to Low)</option>
-						<option value="3" <?php if($selected ==3) echo "selected"?>>By Price (Low to High)</option>
-						<option value="4" <?php if($selected ==4) echo "selected"?>>By Year  (High to Low)</option>
-						<option value="5" <?php if($selected ==5) echo "selected"?>>By Year  (Low to High)</option>
-						<option value="6" <?php if($selected ==6) echo "selected"?>>By Mileage in KM  (High to Low)</option>
-						<option value="7" <?php if($selected ==7) echo "selected"?>>By Mileage in KM  (Low to High)</option>
-						
+							<option value="0" <?php if($selected ==0) echo "selected"?>>Not sorted</option>
+							<option value="1" <?php if($selected ==1) echo "selected"?>>By Make</option>
+							<option value="2" <?php if($selected ==2) echo "selected"?>>By Price (High to Low)</option>
+							<option value="3" <?php if($selected ==3) echo "selected"?>>By Price (Low to High)</option>
+							<option value="4" <?php if($selected ==4) echo "selected"?>>By Year  (High to Low)</option>
+							<option value="5" <?php if($selected ==5) echo "selected"?>>By Year  (Low to High)</option>
+							<option value="6" <?php if($selected ==6) echo "selected"?>>By Mileage in KM  (High to Low)</option>
+							<option value="7" <?php if($selected ==7) echo "selected"?>>By Mileage in KM  (Low to High)</option>
 						</select>
 					</form>
-					</br></br>
+					</br>
+					</br>
 				<?php
 					if(isset($_POST["sorting"])){
 						switch($_POST["sorting"]){
@@ -49,7 +50,6 @@
 							case 7: SortByKM_Low_High($cars);
 									break;
 						}
-						
 					}
 					Display($cars);
 				?>
